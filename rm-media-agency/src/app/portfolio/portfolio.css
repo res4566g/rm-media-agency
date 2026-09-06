@@ -1,0 +1,274 @@
+.portfolio-page {
+  min-height: 100vh;
+  background: #030406;
+  color: #f4f6f8;
+  font-family: Arial, Helvetica, sans-serif;
+  overflow: hidden;
+}
+
+.portfolio-nav {
+  height: 90px;
+  padding: 0 6vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(255,255,255,.1);
+}
+
+.portfolio-brand {
+  color: white;
+  text-decoration: none;
+  font-size: 30px;
+  font-weight: 900;
+  letter-spacing: -2px;
+}
+
+.back-home {
+  color: #aaa;
+  text-decoration: none;
+  font-size: 12px;
+  letter-spacing: 2px;
+  transition: .3s;
+}
+
+.back-home:hover {
+  color: white;
+}
+
+.portfolio-hero {
+  min-height: 75vh;
+  padding: 13vh 6vw 10vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background:
+    radial-gradient(circle at 75% 35%, rgba(25,55,100,.35), transparent 35%),
+    #030406;
+}
+
+.portfolio-hero > p:first-child {
+  color: #7f8da5;
+  font-size: 11px;
+  letter-spacing: 4px;
+  margin-bottom: 30px;
+}
+
+.portfolio-hero h1 {
+  margin: 0;
+  max-width: 1100px;
+  font-size: clamp(60px, 11vw, 160px);
+  line-height: .85;
+  letter-spacing: -8px;
+  font-weight: 800;
+}
+
+.portfolio-hero h1 span {
+  display: block;
+  color: #8292ad;
+}
+
+.portfolio-intro {
+  max-width: 570px;
+  margin-top: 45px;
+  color: #8d95a2;
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+.portfolio-section {
+  padding: 100px 6vw;
+  border-top: 1px solid rgba(255,255,255,.08);
+}
+
+.section-heading {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  margin-bottom: 55px;
+}
+
+.section-heading span {
+  color: #65748d;
+  font-size: 12px;
+  letter-spacing: 3px;
+}
+
+.section-heading h2 {
+  margin: 0;
+  font-size: clamp(28px, 4vw, 55px);
+  letter-spacing: -2px;
+}
+
+.design-grid {
+  columns: 4 240px;
+  column-gap: 18px;
+}
+
+.design-card {
+  position: relative;
+  margin-bottom: 18px;
+  break-inside: avoid;
+  overflow: hidden;
+  background: #080c13;
+}
+
+.design-card img {
+  width: 100%;
+  display: block;
+  transition: transform .6s cubic-bezier(.2,.8,.2,1);
+}
+
+.design-card:hover img {
+  transform: scale(1.04);
+}
+
+.card-number {
+  position: absolute;
+  bottom: 12px;
+  right: 12px;
+  padding: 7px 10px;
+  background: rgba(0,0,0,.7);
+  font-size: 10px;
+  letter-spacing: 2px;
+}
+
+.reels-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+.reel-card {
+  position: relative;
+  background: #080c13;
+  overflow: hidden;
+}
+
+.reel-card video {
+  width: 100%;
+  display: block;
+  aspect-ratio: 9 / 16;
+  object-fit: cover;
+}
+
+.reel-label {
+  padding: 15px;
+  font-size: 11px;
+  letter-spacing: 3px;
+  color: #8d95a2;
+}
+
+.logos-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 18px;
+}
+
+.logo-card {
+  min-height: 220px;
+  background: #080c13;
+  border: 1px solid rgba(255,255,255,.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.logo-card img {
+  width: 80%;
+  max-height: 180px;
+  object-fit: contain;
+  transition: transform .5s ease;
+}
+
+.logo-card:hover img {
+  transform: scale(1.08);
+}
+
+.portfolio-cta {
+  padding: 160px 6vw;
+  text-align: center;
+  background:
+    radial-gradient(circle at center, #10203b 0%, #030406 55%);
+}
+
+.portfolio-cta p {
+  color: #7f8da5;
+  font-size: 11px;
+  letter-spacing: 4px;
+}
+
+.portfolio-cta h2 {
+  font-size: clamp(48px, 9vw, 130px);
+  line-height: .88;
+  letter-spacing: -6px;
+  margin: 25px 0 55px;
+}
+
+.portfolio-cta a {
+  display: inline-block;
+  padding: 18px 30px;
+  border: 1px solid rgba(255,255,255,.3);
+  color: white;
+  text-decoration: none;
+  font-size: 12px;
+  letter-spacing: 3px;
+  transition: .3s;
+}
+
+.portfolio-cta a:hover {
+  background: white;
+  color: #030406;
+}
+
+@media (max-width: 900px) {
+  .reels-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .logos-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 560px) {
+  .portfolio-nav {
+    height: 70px;
+    padding: 0 20px;
+  }
+
+  .portfolio-hero,
+  .portfolio-section {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .portfolio-hero h1 {
+    font-size: 58px;
+    letter-spacing: -4px;
+  }
+
+  .design-grid {
+    columns: 2;
+  }
+
+  .reels-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .logos-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .logo-card {
+    min-height: 150px;
+  }
+
+  .portfolio-cta {
+    padding: 100px 20px;
+  }
+
+  .portfolio-cta h2 {
+    letter-spacing: -3px;
+  }
+}

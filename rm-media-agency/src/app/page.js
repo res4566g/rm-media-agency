@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { useRouter } from "next/navigation";
 import { motion } from "framer-motion";
 import {
   ArrowUpRight,
@@ -355,6 +356,7 @@ function Consultation() {
 }
 
 export default function Home() {
+  const router = useRouter();
   const [menuOpen, setMenuOpen] = useState(false);
   const [activeService, setActiveService] = useState(0);
 
@@ -551,7 +553,10 @@ export default function Home() {
             </h2>
           </div>
 
-          <button className="text-link">
+          <button
+            className="text-link"
+            onClick={() => window.location.href = "/portfolio"}
+          >
             VIEW ALL WORK <ArrowUpRight size={17} />
           </button>
         </div>
