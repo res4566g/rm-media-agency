@@ -2,7 +2,8 @@ import "./globals.css";
 
 export const metadata = {
   title: "R&M Media Agency",
-  description: "Strategy. Creative. Media. Digital. Experiences.",
+  description:
+    "Strategy. Creative. Media. Digital. Experiences. R&M Media Agency.",
 };
 
 export default function RootLayout({ children }) {
